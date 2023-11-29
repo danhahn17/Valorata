@@ -1,20 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJAX Project</title>
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header>
-  </header>
-  <main>
-  </main>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Project</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <em>VALORANT</em>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row red-stripe-tabs">
+          <div class="agents-tab tab">Agents</div>
+          <div class="weapons-tab tab">Weapons</div>
+          <div class="maps-tab tab">Maps</div>
+          <div class="create-a-card-tab tab">Create a Card</div>
+          <div class="gallery-tab tab">Gallery</div>
+        </div>
+
+        <!-- HOMEPAGE -->
+
+        <div class="homepage">
+          <div class="row intro">
+            <div class="welcome-agent">- Welcome Agent -</div>
+            <br />
+            <div>
+              Take the time to look through all the agents, weapons and maps
+              that Valorant has to offer.
+            </div>
+          </div>
+          <div class="row">
+            <div class="homepage-agents">
+              <div class="in-front">
+                <img
+                  src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png"
+                  alt="agent omen"
+                  class="home-agent-picture" />
+              </div>
+              <div class="in-front">
+                <img
+                  src="https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png"
+                  alt="agent reyna"
+                  class="home-agent-picture" />
+              </div>
+              <div class="in-front">
+                <img
+                  src="https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png"
+                  alt="agent killjoy"
+                  class="home-agent-picture" />
+              </div>
+            </div>
+            <div class="red-stripe-1"></div>
+          </div>
+          <div class="row text">
+            Afterwards, create a card with your favorite agent, weapon and map.
+          </div>
+          <div class="row card-example-row">
+            <div class="created-card-example-container">
+              <img
+                src="https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png"
+                alt="agent astra"
+                class="home-agent-picture-example" />
+              <img
+                src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png"
+                alt="weapon odin"
+                class="home-weapon-picture" />
+            </div>
+            <div class="red-stripe-2"></div>
+          </div>
+          <div class="row text bottom-text">
+            You can view your cards in the gallery and remove any cards you
+            don't want in your gallery.
+          </div>
+        </div>
+      </div>
+
+      <!-- AGENTS 01 - 13 -->
+
+      <div class="agents-first"></div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

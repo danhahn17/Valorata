@@ -1,0 +1,148 @@
+.khanh {
+  display: none;
+}
+
+/* @media screen and (max-width: 768px) {
+  .container {
+    max-width: 900px;
+  }
+} */
+
+.header {
+  background: rgb(13, 25, 36);
+  color: white;
+  font-size: 50px;
+  width: 100vw;
+  padding: 5px;
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: rgb(13, 25, 36);
+  max-height: 2500px;
+  width: 100vw;
+}
+
+.row {
+  display: flex;
+  width: 100vw;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-family: Roboto, sans-serif;
+}
+
+.welcome-agent {
+  font-weight: bolder;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-family: Roboto, sans-serif;
+}
+
+.bottom-text {
+  padding-top: 15px;
+  padding-bottom: 100px;
+}
+
+.red-stripe-tabs {
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 70, 85);
+  color: white;
+}
+
+.tab {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+}
+
+.homepage-agents {
+  width: 100vw;
+  height: 225px;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.home-agent-picture {
+  height: 215px;
+  width: 230px;
+  padding: 0;
+}
+
+.in-front {
+  position: relative;
+  z-index: 5;
+}
+
+.card-example-row {
+  display: flex;
+  justify-content: center;
+}
+
+.created-card-example-container {
+  height: 235px;
+  width: 215px;
+  position: relative;
+  z-index: 2;
+  background-image: url('https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/splash.png');
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.home-agent-picture-example {
+  height: 215px;
+  width: 230px;
+  position: relative;
+  top: 0;
+  left: 5px;
+  z-index: 2;
+  transform: translate(-10px, 10px);
+}
+
+.home-weapon-picture {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  transform: translate(110px, -75px) rotate(90deg);
+}
+
+.red-stripe-1 {
+  background: rgb(255, 70, 85);
+  margin-top: 50px;
+  height: 100px;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.red-stripe-2 {
+  margin-top: 125px;
+  background: rgb(255, 70, 85);
+  height: 40px;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+}

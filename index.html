@@ -18,7 +18,9 @@
   <body>
     <header class="header">
       <em>VALORATA</em>
-      <div class="agents-first-group-header">Agents: 01 - 12</div>
+      <div class="agents-first-group-header hidden">Agents: 01 - 12</div>
+      <div class="agents-second-group-header hidden">Agents: 13 - 24</div>
+      <div class="agent-select-view-header">Agent: 01 Brimstone</div>
     </header>
 
     <main>
@@ -97,7 +99,7 @@
 
       <!-- AGENTS 01 - 12 -->
 
-      <div class="agents-first-group">
+      <div class="agents-first-group-container hidden">
         <div class="row agent-row">
           <div class="agent-select">
             <div class="triangle"></div>
@@ -211,16 +213,137 @@
 
         <div class="row next-agent-page">
           <div class="next-agent-button-row">
-            <button class="next-agent-button">
-              &xrarr;
-              <br />
-              Agents 13 - 24
-            </button>
+            <button class="next-agent-button">Agents 13 - 24 &xrarr;</button>
           </div>
         </div>
       </div>
 
       <!-- AGENTS 13 - 24 -->
+
+      <div class="agents-second-group-container hidden">
+        <div class="row agent-row">
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">13 Skye</div>
+            <img
+              src="https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/fullportrait.png"
+              alt="agent skye"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">14 Yoru</div>
+            <img
+              src="https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/fullportrait.png"
+              alt="agent yoru"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">15 Astra</div>
+            <img
+              src="https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png"
+              alt="agent astra"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">16 KAY/O</div>
+            <img
+              src="https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/fullportrait.png"
+              alt="agent kay/o"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">17 Chamber</div>
+            <img
+              src="https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/fullportrait.png"
+              alt="agent chamber"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">18 Neon</div>
+            <img
+              src="https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/fullportrait.png"
+              alt="agent neon"
+              class="agent-picture" />
+          </div>
+        </div>
+
+        <div class="row agent-row">
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">19 Fade</div>
+            <img
+              src="https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/fullportrait.png"
+              alt="agent fade"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">20 Harbor</div>
+            <img
+              src="https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/fullportrait.png"
+              alt="agent harbor"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">21 Gekko</div>
+            <img
+              src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
+              alt="agent gekko"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">22 Deadlock</div>
+            <img
+              src="https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/fullportrait.png"
+              alt="agent deadlock"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">23 Iso</div>
+            <img
+              src="https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/fullportrait.png"
+              alt="agent iso"
+              class="agent-picture" />
+          </div>
+          <div class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">24 TBA</div>
+            <div class="question-mark">?</div>
+          </div>
+
+          <div class="row previous-agent-page">
+            <div class="previous-agent-button-row">
+              <button class="previous-agent-button">
+                &xlarr; Agents 01 - 12
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Agent Page -->
+
+      <div class="agent-select-view"></div>
     </main>
 
     <script src="js/data.js"></script>

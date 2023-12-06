@@ -467,7 +467,7 @@
 
 /* to screen size */
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 380px) {
   /* Agent View Page */
 
   .agent-select-view-container {

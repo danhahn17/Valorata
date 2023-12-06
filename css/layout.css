@@ -24,7 +24,8 @@
 .maps-second-group-header,
 .map-select-view-header,
 .create-a-card-header,
-.gallery-header {
+.gallery-header,
+.clicked-gallery-card-header {
   font-size: 14px;
   padding-left: 20px;
 }
@@ -896,6 +897,24 @@
   border-radius: 25px;
 }
 
+/* clicked gallery card page */
+
+.clicked-gallery-card {
+  background-color: rgb(13, 25, 36);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.clicked-card-display {
+  height: 250px;
+  width: 250px;
+  border: 5px rgb(255, 70, 85) ridge;
+  margin-top: 65px;
+  border-radius: 10px;
+}
+
 /* to mobile size */
 
 @media screen and (max-width: 375px) {
@@ -965,6 +984,17 @@
     position: relative;
     z-index: 2;
     top: 40px;
+  }
+
+  /* gallery page */
+
+  .gallery-card-container {
+    margin-left: 15px;
+  }
+
+  .gallery-card {
+    width: calc(50% - 20px);
+    height: 150px;
   }
 }
 
@@ -1308,5 +1338,12 @@
 
   .selected-map-layout-image {
     width: 35%;
+  }
+
+  /* clicked card page */
+
+  .clicked-card-display {
+    height: 350px;
+    width: 350px;
   }
 }

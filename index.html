@@ -30,21 +30,19 @@
       <div class="weapon-select-view-header hidden">Weapon: Operator</div>
       <div class="maps-first-group-header hidden">Maps (1/2)</div>
       <div class="maps-second-group-header hidden">Maps (2/2)</div>
-
-      <div class="map-select-view-header">Map: ASCENT</div>
-
+      <div class="map-select-view-header hidden">Map: ASCENT</div>
       <div class="create-a-card-header hidden">Create a Card</div>
-      <div class="gallery-header hidden">Gallery</div>
+      <div class="gallery-header">Gallery</div>
     </header>
 
     <main>
       <div class="tabs-container">
         <div class="row red-stripe-tabs">
-          <div class="agents-tab tab">Agents</div>
-          <div class="weapons-tab tab">Weapons</div>
-          <div class="maps-tab tab">Maps</div>
-          <div class="create-a-card-tab tab">Create a Card</div>
-          <div class="gallery-tab tab">Gallery</div>
+          <a class="agents-tab tab">Agents</a>
+          <a class="weapons-tab tab">Weapons</a>
+          <a class="maps-tab tab">Maps</a>
+          <a class="create-a-card-tab tab">Create a Card</a>
+          <a class="gallery-tab tab">Gallery</a>
         </div>
 
         <!-- HOMEPAGE -->
@@ -753,7 +751,7 @@
 
       <!-- Selected Map View Page -->
 
-      <div class="selected-map-view-page-container">
+      <div class="selected-map-view-page-container hidden">
         <div class="map-banner">
           <div class="vertical-blue-5"></div>
           <div class="map-banner-text">ASCENT</div>
@@ -772,7 +770,110 @@
 
       <!-- Create a Card -->
 
+      <div class="create-a-card-container hidden">
+        <div class="empty-card-holder"></div>
+
+        <div class="card-selections">
+          <label for="card-agent-selection">Select Your Agent:</label>
+          <select required name="card-agent" id="card-agent-selection">
+            <option value="selected-no-agent">No Agent Selected</option>
+            <option value="selected-brimstone">Brimstone</option>
+            <option value="selected-phoenix">Phoenix</option>
+            <option value="selected-sage">Sage</option>
+            <option value="selected-viper">Viper</option>
+            <option value="selected-cypher">Cypher</option>
+            <option value="selected-reyna">Reyna</option>
+            <option value="selected-killjoy">Killjoy</option>
+            <option value="selected-breach">Breach</option>
+            <option value="selected-omen">Omen</option>
+            <option value="selected-jett">Jett</option>
+            <option value="selected-raze">Raze</option>
+            <option value="selected-skye">Skye</option>
+            <option value="selected-yoru">Yoru</option>
+            <option value="selected-astra">Astra</option>
+            <option value="selected-kay/o">KAY/O</option>
+            <option value="selected-chamber">Chamber</option>
+            <option value="selected-neon">Neon</option>
+            <option value="selected-fade">Fade</option>
+            <option value="selected-harbor">Harbor</option>
+            <option value="selected-gekko">Gekko</option>
+            <option value="selected-deadlock">Deadlock</option>
+            <option value="selected-iso">Iso</option>
+          </select>
+
+          <label for="card-weapon-selection">Select Your Weapon:</label>
+          <select required name="card-weapon" id="card-weapon-selection">
+            <option value="selected-no-weapon">No Weapon Selected</option>
+            <option value="selected-classic">Classic</option>
+            <option value="selected-shorty">Shorty</option>
+            <option value="selected-frenzy">Frenzy</option>
+            <option value="selected-ghost">Ghost</option>
+            <option value="selected-sheriff">Sheriff</option>
+            <option value="selected-stinger">Stinger</option>
+            <option value="selected-spectre">Spectre</option>
+            <option value="selected-bucky">Bucky</option>
+            <option value="selected-judge">Judge</option>
+            <option value="selected-bulldog">Bulldog</option>
+            <option value="selected-guardian">Guardian</option>
+            <option value="selected-phantom">Phantom</option>
+            <option value="selected-vandal">Vandal</option>
+            <option value="selected-marshal">Marshal</option>
+            <option value="selected-operator">Operator</option>
+            <option value="selected-ares">Ares</option>
+            <option value="selected-odin">Odin</option>
+            <option value="selected-melee">Melee</option>
+          </select>
+
+          <label for="card-map-selection">Select Your Map:</label>
+          <select required name="card-map" id="card-map-selection">
+            <option value="selected-no-map">No Map Selected</option>
+            <option value="selected-ascent">Ascent</option>
+            <option value="selected-bind">Bind</option>
+            <option value="selected-breeze">Breeze</option>
+            <option value="selected-fracture">Fracture</option>
+            <option value="selected-haven">Haven</option>
+            <option value="selected-icebox">Icebox</option>
+            <option value="selected-lotus">Lotus</option>
+            <option value="selected-pearl">Pearl</option>
+            <option value="selected-split">Split</option>
+            <option value="selected-sunset">Sunset</option>
+          </select>
+        </div>
+
+        <button class="create-card-save-button">SAVE</button>
+      </div>
+
       <!-- Gallery -->
+
+      <div class="gallery-card-background">
+        <div class="gallery-card-container">
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Card View Page -->
     </main>
 
     <script src="js/data.js"></script>

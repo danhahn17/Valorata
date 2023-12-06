@@ -84,7 +84,7 @@
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   color: white;
   font-family: Roboto, sans-serif;
   font-weight: bolder;
@@ -806,17 +806,100 @@
   width: 100%;
 }
 
+/* create card */
+
+.create-a-card-container {
+  background-color: rgb(13, 25, 36);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-card-holder {
+  background-color: white;
+  border: 5px rgb(255, 70, 85) ridge;
+  border-radius: 15px;
+  height: 250px;
+  width: 250px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.card-selections {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+}
+
+#card-agent-selection,
+#card-weapon-selection,
+#card-map-selection {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+}
+
+.create-card-save-button {
+  height: 35px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: rgb(255, 70, 85);
+  color: rgb(13, 25, 36);
+  font-weight: bolder;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+/* gallery page */
+
+.gallery-card-background {
+  background-color: rgb(13, 25, 36);
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery-card-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gallery-card {
+  width: calc(33% - 20px);
+  float: left;
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  height: 250px;
+  border: 5px rgb(255, 70, 85) ridge;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-button {
+  height: 22px;
+  width: 22px;
+  font-weight: bolder;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 25px;
+}
+
 /* to mobile size */
 
 @media screen and (max-width: 375px) {
   .tab {
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    font-family: Roboto, sans-serif;
-    font-weight: bolder;
     font-size: 10px;
   }
 

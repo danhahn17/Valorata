@@ -18,22 +18,6 @@
   <body>
     <header class="header">
       <em>VALORATA</em>
-      <div class="agents-first-group-header hidden">Agents: 01 - 12</div>
-      <div class="agents-second-group-header hidden">Agents: 13 - 24</div>
-      <div class="agent-select-view-header hidden">Agent: 01 Brimstone</div>
-      <div class="weapon-first-group-header hidden">
-        Weapons: Sidearms, SMGs &amp; Shotguns
-      </div>
-      <div class="weapon-second-group-header hidden">
-        Rifles, Snipers, Machine Guns &amp; Melee
-      </div>
-      <div class="weapon-select-view-header hidden">Weapon: Operator</div>
-      <div class="maps-first-group-header hidden">Maps (1/2)</div>
-      <div class="maps-second-group-header hidden">Maps (2/2)</div>
-      <div class="map-select-view-header hidden">Map: ASCENT</div>
-      <div class="create-a-card-header hidden">Create a Card</div>
-      <div class="gallery-header hidden">Gallery</div>
-      <div class="clicked-gallery-card-header hidden">Gallery Card</div>
     </header>
 
     <main>
@@ -48,7 +32,7 @@
 
         <!-- HOMEPAGE -->
 
-        <div class="homepage">
+        <div data-view="homepage" class="homepage">
           <div class="row intro">
             <div class="welcome-agent">- Welcome Agent -</div>
             <br />
@@ -112,7 +96,9 @@
 
       <!-- AGENTS 01 - 12 -->
 
-      <div class="agents-first-group-container hidden">
+      <div
+        data-view="agents-view-page-1"
+        class="agents-first-group-container hidden">
         <div class="row agent-row">
           <div class="agent-select">
             <div class="triangle"></div>
@@ -233,7 +219,9 @@
 
       <!-- AGENTS 13 - 24 -->
 
-      <div class="agents-second-group-container hidden">
+      <div
+        data-view="agents-view-page-2"
+        class="agents-second-group-container hidden">
         <div class="row agent-row">
           <div class="agent-select">
             <div class="triangle"></div>
@@ -356,7 +344,9 @@
 
       <!-- Selected Agent Page -->
 
-      <div class="row agent-select-view-container hidden">
+      <div
+        data-view="selected-agent-page"
+        class="row agent-select-view-container hidden">
         <div class="row agent-banner">
           <div class="vertical-blue-1"></div>
           <div class="agent-banner-text">Agent 01: Brimstone</div>
@@ -399,7 +389,9 @@
 
       <!-- Weapon Page 1 -->
 
-      <div class="weapon-page-container-1 hidden">
+      <div
+        data-view="weapons-view-page-1"
+        class="weapon-page-container-1 hidden">
         <div class="row weapon-group-1-row-1">
           <div class="weapon-container">
             <img
@@ -490,7 +482,9 @@
 
       <!-- Weapon Page 2 -->
 
-      <div class="weapon-page-container-2 hidden">
+      <div
+        data-view="weapons-view-page-2"
+        class="weapon-page-container-2 hidden">
         <div class="row weapon-group-1-row-1">
           <div class="weapon-container-2">
             <img
@@ -581,7 +575,9 @@
 
       <!-- Selected Weapon View Page -->
 
-      <div class="row selected-weapon-view-page hidden">
+      <div
+        data-view="selected-weapon-page"
+        class="row selected-weapon-view-page hidden">
         <div class="weapon-banner">
           <div class="vertical-blue-3"></div>
           <div class="weapon-banner-text">Sniper Rifle: Operator</div>
@@ -622,7 +618,7 @@
 
       <!-- Maps Group 1 -->
 
-      <div class="maps-group-container hidden">
+      <div data-view="maps-view-page-1" class="maps-group-container hidden">
         <div class="map-spacing"></div>
 
         <div class="maps-group ascent">
@@ -687,7 +683,7 @@
 
       <!-- Maps Group 2 -->
 
-      <div class="maps-group-container hidden">
+      <div data-view="maps-view-page-2" class="maps-group-container hidden">
         <div class="map-spacing"></div>
 
         <div class="maps-group icebox">
@@ -752,7 +748,9 @@
 
       <!-- Selected Map View Page -->
 
-      <div class="selected-map-view-page-container hidden">
+      <div
+        data-view="selected-map-page"
+        class="selected-map-view-page-container hidden">
         <div class="map-banner">
           <div class="vertical-blue-5"></div>
           <div class="map-banner-text">ASCENT</div>
@@ -771,7 +769,9 @@
 
       <!-- Create a Card -->
 
-      <div class="create-a-card-container hidden">
+      <div
+        data-view="create-a-card-page"
+        class="create-a-card-container hidden">
         <div class="empty-card-holder"></div>
 
         <div class="card-selections">
@@ -846,7 +846,7 @@
 
       <!-- Gallery -->
 
-      <div class="gallery-card-background hidden">
+      <div data-view="gallery-page" class="gallery-card-background hidden">
         <div class="gallery-card-container">
           <div class="gallery-card">
             <button class="delete-button">X</button>
@@ -876,7 +876,7 @@
 
       <!-- Selected Card View Page -->
 
-      <div class="clicked-gallery-card hidden">
+      <div data-view="selected-card-page" class="clicked-gallery-card hidden">
         <div class="clicked-card-display"></div>
       </div>
     </main>

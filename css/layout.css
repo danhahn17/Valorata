@@ -14,22 +14,6 @@
   align-items: center;
 }
 
-.agents-first-group-header,
-.agents-second-group-header,
-.agent-select-view-header,
-.weapon-first-group-header,
-.weapon-second-group-header,
-.weapon-select-view-header,
-.maps-first-group-header,
-.maps-second-group-header,
-.map-select-view-header,
-.create-a-card-header,
-.gallery-header,
-.clicked-gallery-card-header {
-  font-size: 14px;
-  padding-left: 20px;
-}
-
 .tabs-container {
   display: flex;
   flex-direction: column;
@@ -101,6 +85,12 @@
   width: calc(100% / 3);
   display: flex;
   justify-content: center;
+}
+
+.homepage {
+  background-color: rgb(13, 25, 36);
+  height: 100vh;
+  width: 100%;
 }
 
 .homepage-agents {

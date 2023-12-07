@@ -1,20 +1,888 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJAX Project</title>
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header>
-  </header>
-  <main>
-  </main>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Project</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a>VALORATA</a>
+    </header>
+
+    <main>
+      <div class="tabs-container">
+        <div class="row red-stripe-tabs">
+          <a class="agents-tab tab">Agents</a>
+          <a class="weapons-tab tab">Weapons</a>
+          <a class="maps-tab tab">Maps</a>
+          <a class="create-a-card-tab tab">Create a Card</a>
+          <a class="gallery-tab tab">Gallery</a>
+        </div>
+
+        <!-- HOMEPAGE -->
+
+        <div data-view="homepage" class="homepage">
+          <div class="row intro">
+            <div class="welcome-agent">- Welcome Agent -</div>
+            <br />
+            <div>
+              Take the time to look through all the agents, weapons and maps
+              that Valorant has to offer.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="in-front column-third"></div>
+
+            <div class="homepage-agents column-third">
+              <div class="column-sixth in-front">
+                <img
+                  src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png"
+                  alt="agent omen"
+                  class="home-agent-picture" />
+              </div>
+
+              <div class="column-sixth in-front">
+                <img
+                  src="https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png"
+                  alt="agent reyna"
+                  class="home-agent-picture" />
+              </div>
+
+              <div class="column-sixth in-front">
+                <img
+                  src="https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png"
+                  alt="agent killjoy"
+                  class="home-agent-picture" />
+              </div>
+            </div>
+
+            <div class="in-front column-third"></div>
+          </div>
+
+          <div class="row text pushed">
+            Afterwards, create a card with your favorite agent, weapon and map.
+          </div>
+          <div class="row card-example-row">
+            <div class="created-card-example-container">
+              <img
+                src="https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png"
+                alt="agent astra"
+                class="home-agent-picture-example" />
+              <img
+                src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png"
+                alt="weapon odin"
+                class="home-weapon-picture" />
+            </div>
+            <div class="red-stripe-1"></div>
+          </div>
+          <div class="row text bottom-text">
+            You can view your cards in the gallery and remove any cards you
+            don't want in your gallery.
+          </div>
+        </div>
+      </div>
+
+      <!-- AGENTS 01 - 12 -->
+
+      <div
+        data-view="agents-view-page-1"
+        class="agents-first-group-container hidden">
+        <div class="row agent-row">
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">01 Brimstone</div>
+            <img
+              src="https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/fullportrait.png"
+              alt="agent brimstone"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">02 Phoenix</div>
+            <img
+              src="https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/fullportrait.png"
+              alt="agent phoenix"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">03 Sage</div>
+            <img
+              src="https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/fullportrait.png"
+              alt="agent sage"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">04 Sova</div>
+            <div class="not-available">N/A</div>
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">05 Viper</div>
+            <img
+              src="https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/fullportrait.png"
+              alt="agent viper"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">06 Cypher</div>
+            <img
+              src="https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/fullportrait.png"
+              alt="agent cypher"
+              class="agent-picture" />
+          </a>
+        </div>
+
+        <div class="row agent-row">
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">07 Reyna</div>
+            <img
+              src="https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png"
+              alt="agent reyna"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">08 Killjoy</div>
+            <img
+              src="https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png"
+              alt="agent killjoy"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">09 Breach</div>
+            <img
+              src="https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/fullportrait.png"
+              alt="agent breach"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">10 Omen</div>
+            <img
+              src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png"
+              alt="agent omen"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">11 Jett</div>
+            <img
+              src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png"
+              alt="agent jett"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">12 Raze</div>
+            <img
+              src="https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/fullportrait.png"
+              alt="agent raze"
+              class="agent-picture" />
+          </a>
+        </div>
+
+        <div class="row next-agent-page">
+          <div class="next-agent-button-row">
+            <button class="next-agent-button">Agents 13 - 24 &xrarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AGENTS 13 - 24 -->
+
+      <div
+        data-view="agents-view-page-2"
+        class="agents-second-group-container hidden">
+        <div class="row agent-row">
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">13 Skye</div>
+            <img
+              src="https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/fullportrait.png"
+              alt="agent skye"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">14 Yoru</div>
+            <img
+              src="https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/fullportrait.png"
+              alt="agent yoru"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">15 Astra</div>
+            <img
+              src="https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png"
+              alt="agent astra"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">16 KAY/O</div>
+            <img
+              src="https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/fullportrait.png"
+              alt="agent kay/o"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">17 Chamber</div>
+            <img
+              src="https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/fullportrait.png"
+              alt="agent chamber"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">18 Neon</div>
+            <img
+              src="https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/fullportrait.png"
+              alt="agent neon"
+              class="agent-picture" />
+          </a>
+        </div>
+
+        <div class="row agent-row">
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">19 Fade</div>
+            <img
+              src="https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/fullportrait.png"
+              alt="agent fade"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">20 Harbor</div>
+            <img
+              src="https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/fullportrait.png"
+              alt="agent harbor"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">21 Gekko</div>
+            <img
+              src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
+              alt="agent gekko"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">22 Deadlock</div>
+            <img
+              src="https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/fullportrait.png"
+              alt="agent deadlock"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">23 Iso</div>
+            <img
+              src="https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/fullportrait.png"
+              alt="agent iso"
+              class="agent-picture" />
+          </a>
+          <a class="agent-select">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="agent-name">24 TBA</div>
+            <div class="question-mark">?</div>
+          </a>
+
+          <div class="row previous-agent-page">
+            <div class="previous-agent-button-row">
+              <button class="previous-agent-button">
+                Agents 01 - 12 <br />
+                &xlarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Agent Page -->
+
+      <div
+        data-view="selected-agent-page"
+        class="row agent-select-view-container hidden">
+        <div class="row agent-banner">
+          <div class="vertical-blue-1"></div>
+          <div class="agent-banner-text">Agent 01: Brimstone</div>
+        </div>
+        <div class="agent-select-view-image-container">
+          <img
+            src="https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/fullportrait.png"
+            alt="agent brimstone"
+            class="agent-select-view-image" />
+        </div>
+
+        <div class="row first-red-stripe-agent-view"></div>
+
+        <div class="row second-red-stripe-agent-view"></div>
+
+        <div class="row info-red-stripe-agent-view">
+          <div class="vertical-blue-2"></div>
+          <div class="agent-description-text-container">
+            <div class="description-title">Description:</div>
+            <div class="description-text">
+              Joining from the U.S.A., Brimstone's orbital arsenal ensures his
+              squad always has the advantage. His ability to deliver utility
+              precisely and safely make him the unmatched
+              boots-on-the-ground-commander.
+            </div>
+            <br />
+            <div class="description-title">Role:</div>
+            <div class="description-text">Controller</div>
+            <br />
+            <div class="description-title">Abilities:</div>
+            <div class="description-text">
+              Stim Beacon, Incendiary, Sky Smoke
+            </div>
+            <br />
+            <div class="description-title">Ultimate:</div>
+            <div class="description-text">Orbital Strike</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weapon Page 1 -->
+
+      <div
+        data-view="weapons-view-page-1"
+        class="weapon-page-container-1 hidden">
+        <div class="row weapon-group-1-row-1">
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/29a0cfab-485b-f5d5-779a-b59f85e204a8/displayicon.png"
+              alt="classic"
+              class="weapon-image classic-image" />
+            <div class="weapon-name">Classic</div>
+          </a>
+
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/42da8ccc-40d5-affc-beec-15aa47b42eda/displayicon.png"
+              alt="shorty"
+              class="weapon-image shorty-image" />
+            <div class="weapon-name">Shorty</div>
+          </a>
+
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/44d4e95c-4157-0037-81b2-17841bf2e8e3/displayicon.png"
+              alt="frenzy"
+              class="weapon-image frenzy-image" />
+            <div class="weapon-name">Frenzy</div>
+          </a>
+
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/1baa85b4-4c70-1284-64bb-6481dfc3bb4e/displayicon.png"
+              alt="ghost"
+              class="weapon-image ghost-image" />
+            <div class="weapon-name">Ghost</div>
+          </a>
+        </div>
+
+        <div class="row weapon-group-1-row-2">
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/e336c6b8-418d-9340-d77f-7a9e4cfe0702/displayicon.png"
+              alt="sheriff"
+              class="weapon-image sheriff-image" />
+            <div class="weapon-name">Sheriff</div>
+          </a>
+
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/f7e1b454-4ad4-1063-ec0a-159e56b58941/displayicon.png"
+              alt="stinger"
+              class="weapon-image stinger-image" />
+            <div class="weapon-name">Stinger</div>
+          </a>
+
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/462080d1-4035-2937-7c09-27aa2a5c27a7/displayicon.png"
+              alt="spectre"
+              class="weapon-image spectre-image" />
+            <div class="weapon-name">Spectre</div>
+          </a>
+
+          <a class="weapon-container">
+            <img
+              src="https://media.valorant-api.com/weapons/910be174-449b-c412-ab22-d0873436b21b/displayicon.png"
+              alt="bucky"
+              class="weapon-image bucky-image" />
+            <div class="weapon-name">Bucky</div>
+          </a>
+        </div>
+
+        <div class="row weapon-group-1-row-alone">
+          <a class="weapon-container-last">
+            <img
+              src="https://media.valorant-api.com/weapons/ec845bf4-4f79-ddda-a3da-0db3774b2794/displayicon.png"
+              alt="judge"
+              class="weapon-image judge-image" />
+            <div class="weapon-name">Judge</div>
+          </a>
+        </div>
+
+        <div class="row next-weapon-page">
+          <div class="next-weapon-button-row">
+            <button class="next-weapon-button">
+              Rifles, Snipers, Machine Guns &amp; Melee <br />
+              &xrarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weapon Page 2 -->
+
+      <div
+        data-view="weapons-view-page-2"
+        class="weapon-page-container-2 hidden">
+        <div class="row weapon-group-1-row-1">
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/ae3de142-4d85-2547-dd26-4e90bed35cf7/displayicon.png"
+              alt="bulldog"
+              class="weapon-image bulldog-image" />
+            <div class="weapon-name">Bulldog</div>
+          </a>
+
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/4ade7faa-4cf1-8376-95ef-39884480959b/displayicon.png"
+              alt="guardian"
+              class="weapon-image guardian-image" />
+            <div class="weapon-name">Guardian</div>
+          </a>
+
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/ee8e8d15-496b-07ac-e5f6-8fae5d4c7b1a/displayicon.png"
+              alt="phantom"
+              class="weapon-image phantom-image" />
+            <div class="weapon-name">Phantom</div>
+          </a>
+
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/9c82e19d-4575-0200-1a81-3eacf00cf872/displayicon.png"
+              alt="vandal"
+              class="weapon-image vandal-image" />
+            <div class="weapon-name">Vandal</div>
+          </a>
+        </div>
+
+        <div class="row weapon-group-1-row-2">
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/c4883e50-4494-202c-3ec3-6b8a9284f00b/displayicon.png"
+              alt="marshal"
+              class="weapon-image marshal-image" />
+            <div class="weapon-name">Marshal</div>
+          </a>
+
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/a03b24d3-4319-996d-0f8c-94bbfba1dfc7/displayicon.png"
+              alt="operator"
+              class="weapon-image operator-image" />
+            <div class="weapon-name">Operator</div>
+          </a>
+
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/55d8a0f4-4274-ca67-fe2c-06ab45efdf58/displayicon.png"
+              alt="ares"
+              class="weapon-image ares-image" />
+            <div class="weapon-name">Ares</div>
+          </a>
+
+          <a class="weapon-container-2">
+            <img
+              src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png"
+              alt="odin"
+              class="weapon-image odin-image" />
+            <div class="weapon-name">Odin</div>
+          </a>
+        </div>
+
+        <div class="row weapon-group-1-row-alone">
+          <a class="weapon-container-last">
+            <img
+              src="https://media.valorant-api.com/weapons/2f59173c-4bed-b6c3-2191-dea9b58be9c7/displayicon.png"
+              alt="melee"
+              class="weapon-image melee-image" />
+            <div class="weapon-name">Melee</div>
+          </a>
+        </div>
+
+        <div class="row previous-weapon-page">
+          <div class="previous-weapon-button-row">
+            <button class="previous-weapon-button">
+              Sidearms, SMGs &amp; Shotguns <br />
+              &xlarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Weapon View Page -->
+
+      <div
+        data-view="selected-weapon-page"
+        class="row selected-weapon-view-page hidden">
+        <div class="weapon-banner">
+          <div class="vertical-blue-3"></div>
+          <div class="weapon-banner-text">Sidearm: Classic</div>
+        </div>
+        <div class="weapon-image-inverted-triangle-container">
+          <img
+            src="https://media.valorant-api.com/weapons/29a0cfab-485b-f5d5-779a-b59f85e204a8/displayicon.png"
+            alt="classic"
+            class="selected-weapon-image" />
+          <div class="inverted-triangle"></div>
+        </div>
+        <div class="weapon-description-container">
+          <div class="vertical-blue-4"></div>
+          <div class="weapon-description">
+            <div class="description-title">Type:</div>
+            <div class="description-text">Sidearm</div>
+            <br />
+            <div class="description-title">Cost (credits):</div>
+            <div class="description-text">Free</div>
+            <br />
+            <div class="description-title">Fire Rate (rounds/second):</div>
+            <div class="description-text">6.75</div>
+            <br />
+            <div class="description-title">Range(m):</div>
+            <div class="description-text">30 - 50</div>
+            <br />
+            <div class="description-title">Head Shot Damage:</div>
+            <div class="description-text">66</div>
+            <br />
+            <div class="description-title">Body Shot Damage:</div>
+            <div class="description-text">22</div>
+            <br />
+            <div class="description-title">Leg Shot Damage:</div>
+            <div class="description-text">18.7</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maps Group 1 -->
+
+      <div data-view="maps-view-page-1" class="maps-group-container-1 hidden">
+        <div class="map-spacing"></div>
+
+        <a class="maps-group ascent">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/listviewicon.png"
+              alt="ascent"
+              class="ascent-image map-image" />
+            <div class="map-name">ASCENT</div>
+          </div>
+        </a>
+
+        <a class="maps-group bind">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba/listviewicon.png"
+              alt="bind"
+              class="bind-image map-image" />
+            <div class="map-name">BIND</div>
+          </div>
+        </a>
+
+        <a class="maps-group breeze">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/listviewicon.png"
+              alt="breeze"
+              class="breeze-image map-image" />
+            <div class="map-name">BREEZE</div>
+          </div>
+        </a>
+
+        <a class="maps-group fracture">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/b529448b-4d60-346e-e89e-00a4c527a405/listviewicon.png"
+              alt="fracture"
+              class="fracture-image map-image" />
+            <div class="map-name">FRACTURE</div>
+          </div>
+        </a>
+
+        <a class="maps-group haven">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/2bee0dc9-4ffe-519b-1cbd-7fbe763a6047/listviewicon.png"
+              alt="haven"
+              class="haven-image map-image" />
+            <div class="map-name">HAVEN</div>
+          </div>
+        </a>
+
+        <div class="row next-maps-page">
+          <div class="next-maps-button-row">
+            <button class="next-maps-button">
+              Maps (2/2) <br />
+              &xrarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maps Group 2 -->
+
+      <div data-view="maps-view-page-2" class="maps-group-container-2 hidden">
+        <div class="map-spacing"></div>
+
+        <a class="maps-group icebox">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/listviewicon.png"
+              alt="icebox"
+              class="icebox-image map-image" />
+            <div class="map-name">ICEBOX</div>
+          </div>
+        </a>
+
+        <a class="maps-group lotus">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9/listviewicon.png"
+              alt="lotus"
+              class="lotus-image map-image" />
+            <div class="map-name">LOTUS</div>
+          </div>
+        </a>
+
+        <a class="maps-group pearl">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/fd267378-4d1d-484f-ff52-77821ed10dc2/listviewicon.png"
+              alt="pearl"
+              class="pearl-image map-image" />
+            <div class="map-name">PEARL</div>
+          </div>
+        </a>
+
+        <a class="maps-group split">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/listviewicon.png"
+              alt="split"
+              class="split-image map-image" />
+            <div class="map-name">SPLIT</div>
+          </div>
+        </a>
+
+        <a class="maps-group sunset">
+          <div class="map-image-name-container">
+            <img
+              src="https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/listviewicon.png"
+              alt="sunset"
+              class="sunset-image map-image" />
+            <div class="map-name">SUNSET</div>
+          </div>
+        </a>
+
+        <div class="row previous-maps-page">
+          <div class="previous-maps-button-row">
+            <button class="previous-maps-button">
+              Maps (1/2) <br />
+              &xlarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Map View Page -->
+
+      <div
+        data-view="selected-map-page"
+        class="selected-map-view-page-container hidden">
+        <div class="map-banner">
+          <div class="vertical-blue-5"></div>
+          <div class="map-banner-text">ASCENT</div>
+        </div>
+        <div class="map-images-container">
+          <img
+            src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/listviewicon.png"
+            alt="ascent"
+            class="selected-map-image" />
+          <img
+            src="https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/displayicon.png"
+            alt="ascent layout"
+            class="selected-map-layout-image" />
+        </div>
+      </div>
+
+      <!-- Create a Card -->
+
+      <div
+        data-view="create-a-card-page"
+        class="create-a-card-container hidden">
+        <div class="empty-card-holder"></div>
+
+        <div class="card-selections">
+          <label for="card-agent-selection">Select Your Agent:</label>
+          <select required name="card-agent" id="card-agent-selection">
+            <option value="selected-no-agent">No Agent Selected</option>
+            <option value="selected-brimstone">Brimstone</option>
+            <option value="selected-phoenix">Phoenix</option>
+            <option value="selected-sage">Sage</option>
+            <option value="selected-viper">Viper</option>
+            <option value="selected-cypher">Cypher</option>
+            <option value="selected-reyna">Reyna</option>
+            <option value="selected-killjoy">Killjoy</option>
+            <option value="selected-breach">Breach</option>
+            <option value="selected-omen">Omen</option>
+            <option value="selected-jett">Jett</option>
+            <option value="selected-raze">Raze</option>
+            <option value="selected-skye">Skye</option>
+            <option value="selected-yoru">Yoru</option>
+            <option value="selected-astra">Astra</option>
+            <option value="selected-kay/o">KAY/O</option>
+            <option value="selected-chamber">Chamber</option>
+            <option value="selected-neon">Neon</option>
+            <option value="selected-fade">Fade</option>
+            <option value="selected-harbor">Harbor</option>
+            <option value="selected-gekko">Gekko</option>
+            <option value="selected-deadlock">Deadlock</option>
+            <option value="selected-iso">Iso</option>
+          </select>
+
+          <label for="card-weapon-selection">Select Your Weapon:</label>
+          <select required name="card-weapon" id="card-weapon-selection">
+            <option value="selected-no-weapon">No Weapon Selected</option>
+            <option value="selected-classic">Classic</option>
+            <option value="selected-shorty">Shorty</option>
+            <option value="selected-frenzy">Frenzy</option>
+            <option value="selected-ghost">Ghost</option>
+            <option value="selected-sheriff">Sheriff</option>
+            <option value="selected-stinger">Stinger</option>
+            <option value="selected-spectre">Spectre</option>
+            <option value="selected-bucky">Bucky</option>
+            <option value="selected-judge">Judge</option>
+            <option value="selected-bulldog">Bulldog</option>
+            <option value="selected-guardian">Guardian</option>
+            <option value="selected-phantom">Phantom</option>
+            <option value="selected-vandal">Vandal</option>
+            <option value="selected-marshal">Marshal</option>
+            <option value="selected-operator">Operator</option>
+            <option value="selected-ares">Ares</option>
+            <option value="selected-odin">Odin</option>
+            <option value="selected-melee">Melee</option>
+          </select>
+
+          <label for="card-map-selection">Select Your Map:</label>
+          <select required name="card-map" id="card-map-selection">
+            <option value="selected-no-map">No Map Selected</option>
+            <option value="selected-ascent">Ascent</option>
+            <option value="selected-bind">Bind</option>
+            <option value="selected-breeze">Breeze</option>
+            <option value="selected-fracture">Fracture</option>
+            <option value="selected-haven">Haven</option>
+            <option value="selected-icebox">Icebox</option>
+            <option value="selected-lotus">Lotus</option>
+            <option value="selected-pearl">Pearl</option>
+            <option value="selected-split">Split</option>
+            <option value="selected-sunset">Sunset</option>
+          </select>
+        </div>
+
+        <button class="create-card-save-button">SAVE</button>
+      </div>
+
+      <!-- Gallery -->
+
+      <div data-view="gallery-page" class="gallery-card-background hidden">
+        <div class="gallery-card-container">
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+
+          <div class="gallery-card">
+            <button class="delete-button">X</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Card View Page -->
+
+      <div data-view="selected-card-page" class="clicked-gallery-card hidden">
+        <div class="clicked-card-display"></div>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

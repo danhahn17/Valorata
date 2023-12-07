@@ -185,7 +185,28 @@ select:hover {
   width: 100%;
 }
 
-.agent-row {
+.agent-row-1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+.agent-row-2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+.agent-row-3 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+.agent-row-4 {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -235,15 +256,6 @@ select:hover {
   text-align: center;
   top: 285px;
   font-family: Roboto, sans-serif;
-}
-
-.not-available {
-  font-size: 50px;
-  color: white;
-  font-family: Roboto, sans-serif;
-  position: relative;
-  z-index: 2;
-  top: 115px;
 }
 
 .question-mark {

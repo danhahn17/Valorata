@@ -1,3 +1,73 @@
+// WEAPONS API: https://valorant-api.com/v1/weapons
+// MAPS API: https://valorant-api.com/v1/maps
+
+const xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://valorant-api.com/v1/agents/');
+xhr.responseType = 'json';
+xhr.addEventListener('load', function () {
+  for (let i = 0; i < 6; i++) {
+    $agentRow1.appendChild(createAgentElement(xhr.response.data[i]));
+  }
+  for (let i = 6; i < 13; i++) {
+    if (i !== 9) {
+      $agentRow2.appendChild(createAgentElement(xhr.response.data[i]));
+    }
+  }
+  for (let i = 13; i < 19; i++) {
+    $agentRow3.appendChild(createAgentElement(xhr.response.data[i]));
+  }
+  for (let i = 19; i < 24; i++) {
+    $agentRow4.appendChild(createAgentElement(xhr.response.data[i]));
+    $agentRow4.appendChild($agentUnknown);
+  }
+});
+xhr.send();
+
+const $agentRow1 = document.querySelector('.agent-row-1');
+const $agentRow2 = document.querySelector('.agent-row-2');
+const $agentRow3 = document.querySelector('.agent-row-3');
+const $agentRow4 = document.querySelector('.agent-row-4');
+
+const $agentUnknown = document.createElement('a');
+$agentUnknown.setAttribute('class', 'agent-select');
+const $triangle = document.createElement('div');
+$triangle.setAttribute('class', 'triangle');
+const $rectangle = document.createElement('div');
+$rectangle.setAttribute('class', 'rectangle');
+const $agentName = document.createElement('div');
+$agentName.setAttribute('class', 'agent-name');
+$agentName.textContent = 'TBA';
+
+$agentUnknown.appendChild($triangle);
+$agentUnknown.appendChild($rectangle);
+$agentUnknown.appendChild($agentName);
+
+function createAgentElement(index) {
+  const $agentParent = document.createElement('a');
+  $agentParent.setAttribute('class', 'agent-select');
+
+  const $triangle = document.createElement('div');
+  $triangle.setAttribute('class', 'triangle');
+
+  const $rectangle = document.createElement('div');
+  $rectangle.setAttribute('class', 'rectangle');
+
+  const $agentImage = document.createElement('img');
+  $agentImage.setAttribute('src', index.bustPortrait);
+  $agentImage.setAttribute('class', 'agent-picture');
+
+  const $agentName = document.createElement('div');
+  $agentName.setAttribute('class', 'agent-name');
+  $agentName.textContent = index.displayName;
+
+  $agentParent.appendChild($triangle);
+  $agentParent.appendChild($rectangle);
+  $agentParent.appendChild($agentImage);
+  $agentParent.appendChild($agentName);
+
+  return $agentParent;
+}
+
 const $homepageTab = document.querySelector('[data-view=homepage]');
 const $agentViewPage1 = document.querySelector(
   '[data-view=agents-view-page-1]',
@@ -299,20 +369,3 @@ const $clickGallery = document.querySelector('.gallery-tab');
 $clickGallery.addEventListener('click', function (event) {
   viewSwap('gallery-page');
 });
-
-// function getValorantAgents() {
-//   const xhr = new XMLHttpRequest();
-//   xhr.open('GET', 'https://valorant-api.com/v1/agents');
-//   xhr.responseType = 'json';
-//   xhr.addEventListener('load', function () {
-//     console.log(xhr.status);
-//     console.log(xhr.response);
-//   });
-//   xhr.send();
-// }
-
-// getValorantAgents();
-
-// AGENTS API: https://valorant-api.com/v1/agents
-// WEAPONS API: https://valorant-api.com/v1/weapons
-// MAPS API: https://valorant-api.com/v1/maps

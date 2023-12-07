@@ -2,6 +2,21 @@
   display: none !important;
 }
 
+a:hover {
+  background-color: rgb(252, 119, 130);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(252, 119, 130);
+  cursor: pointer;
+}
+
+select:hover {
+  background-color: rgb(252, 119, 130);
+  cursor: pointer;
+}
+
 .header {
   background: rgb(13, 25, 36);
   color: white;
@@ -648,8 +663,8 @@
 
 .selected-weapon-image {
   z-index: 5;
-  height: 75px;
-  width: 350px;
+  height: 100px;
+  width: 175px;
   position: absolute;
   margin-top: 75px;
   margin-bottom: 55px;
@@ -689,9 +704,17 @@
   padding-left: 75px;
 }
 
-/* maps group 1 */
+/* maps group 1 and 2 */
 
-.maps-group-container {
+.maps-group-container-1 {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(13, 25, 36);
+  display: flex;
+  flex-direction: column;
+}
+
+.maps-group-container-2 {
   height: 100vh;
   width: 100%;
   background-color: rgb(13, 25, 36);
@@ -745,6 +768,32 @@
 }
 
 .next-maps-button {
+  border: 5px offset;
+  height: 65px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 900;
+  background-color: rgb(255, 70, 85);
+  border-radius: 5px;
+}
+
+.previous-maps-page {
+  width: 100%;
+  height: 175px;
+}
+
+.previous-maps-button-row {
+  color: white;
+  background-color: rgb(13, 25, 36);
+  position: absolute;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previous-maps-button {
   border: 5px offset;
   height: 65px;
   width: 150px;
@@ -812,8 +861,8 @@
   background-color: white;
   border: 5px rgb(255, 70, 85) ridge;
   border-radius: 15px;
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
   margin-top: 35px;
   margin-bottom: 25px;
 }
@@ -824,16 +873,18 @@
   flex-direction: column;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-family: Roboto, sans-serif;
+  font-size: 20px;
 }
 
 #card-agent-selection,
 #card-weapon-selection,
 #card-map-selection {
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
+  font-size: 18px;
 }
 
 .create-card-save-button {
@@ -908,6 +959,17 @@
 /* to mobile size */
 
 @media screen and (max-width: 375px) {
+  /* homepage */
+
+  .homepage {
+    height: 100%;
+  }
+
+  .intro {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .tab {
     font-size: 10px;
   }
@@ -985,6 +1047,13 @@
   .gallery-card {
     width: calc(50% - 20px);
     height: 150px;
+  }
+
+  /* create a card page */
+
+  .empty-card-holder {
+    height: 250px;
+    width: 250px;
   }
 }
 
@@ -1251,8 +1320,8 @@
   }
 
   .selected-weapon-image {
-    height: 125px;
-    width: 550px;
+    height: 150px;
+    width: 200px;
   }
 
   .inverted-triangle {

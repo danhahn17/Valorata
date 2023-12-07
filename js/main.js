@@ -1,27 +1,24 @@
-// WEAPONS API: https://valorant-api.com/v1/weapons
-// MAPS API: https://valorant-api.com/v1/maps
-
-const xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://valorant-api.com/v1/agents/');
-xhr.responseType = 'json';
-xhr.addEventListener('load', function () {
+const agent = new XMLHttpRequest();
+agent.open('GET', 'https://valorant-api.com/v1/agents/');
+agent.responseType = 'json';
+agent.addEventListener('load', function () {
   for (let i = 0; i < 6; i++) {
-    $agentRow1.appendChild(createAgentElement(xhr.response.data[i]));
+    $agentRow1.appendChild(createAgentElement(agent.response.data[i]));
   }
   for (let i = 6; i < 13; i++) {
     if (i !== 9) {
-      $agentRow2.appendChild(createAgentElement(xhr.response.data[i]));
+      $agentRow2.appendChild(createAgentElement(agent.response.data[i]));
     }
   }
   for (let i = 13; i < 19; i++) {
-    $agentRow3.appendChild(createAgentElement(xhr.response.data[i]));
+    $agentRow3.appendChild(createAgentElement(agent.response.data[i]));
   }
   for (let i = 19; i < 24; i++) {
-    $agentRow4.appendChild(createAgentElement(xhr.response.data[i]));
+    $agentRow4.appendChild(createAgentElement(agent.response.data[i]));
     $agentRow4.appendChild($agentUnknown);
   }
 });
-xhr.send();
+agent.send();
 
 const $agentRow1 = document.querySelector('.agent-row-1');
 const $agentRow2 = document.querySelector('.agent-row-2');
@@ -67,6 +64,107 @@ function createAgentElement(index) {
 
   return $agentParent;
 }
+
+const weapon = new XMLHttpRequest();
+weapon.open('GET', 'https://valorant-api.com/v1/weapons/');
+weapon.responseType = 'json';
+weapon.addEventListener('load', function () {
+  for (let i = 0; i < 4; i++) {
+    $weaponRow1.appendChild(createWeaponElement(weapon.response.data[i]));
+  }
+  for (let i = 4; i < 8; i++) {
+    if ((i = 7)) {
+      $weaponRow2.appendChild(
+        createCustomWeaponElement(weapon.response.data[i]),
+      );
+    } else {
+      $weaponRow2.appendChild(createWeaponElement(weapon.response.data[i]));
+    }
+  }
+  for (let i = 8; i < 9; i++) {
+    $weaponRow3.appendChild(createWeaponElement(weapon.response.data[i]));
+  }
+  for (let i = 9; i < 13; i++) {
+    if ((i = 10)) {
+      $weaponRow4.appendChild(
+        createCustomWeaponElement(weapon.response.data[i]),
+      );
+    }
+    $weaponRow4.appendChild(createWeaponElement(weapon.response.data[i]));
+  }
+  for (let i = 13; i < 17; i++) {
+    $weaponRow5.appendChild(createWeaponElement(weapon.response.data[i]));
+  }
+  for (let i = 17; i < 18; i++) {
+    $weaponRow6.appendChild(createWeaponElement(weapon.response.data[i]));
+  }
+});
+weapon.send();
+
+const $weaponRow1 = document.querySelector('.weapon-group-1-row-1');
+const $weaponRow2 = document.querySelector('.weapon-group-1-row-2');
+const $weaponRow3 = document.querySelector('.weapon-group-1-row-alone');
+const $weaponRow4 = document.querySelector('.weapon-group-2-row-1');
+const $weaponRow5 = document.querySelector('.weapon-group-2-row-2');
+const $weaponRow6 = document.querySelector('.weapon-group-2-row-alone');
+
+function createWeaponElement(index) {
+  const $weaponParent = document.createElement('a');
+  $weaponParent.setAttribute('class', 'weapon-container');
+
+  const $weaponImage = document.createElement('img');
+  $weaponImage.setAttribute('src', index.displayIcon);
+  $weaponImage.setAttribute('class', 'weapon-image');
+
+  const $weaponName = document.createElement('div');
+  $weaponName.setAttribute('class', 'weapon-name');
+  $weaponName.textContent = index.displayName;
+
+  $weaponParent.appendChild($weaponImage);
+  $weaponParent.appendChild($weaponName);
+
+  return $weaponParent;
+}
+
+function createCustomWeaponElement(index) {
+  const $weaponParent = document.createElement('a');
+  $weaponParent.setAttribute('class', 'weapon-container');
+
+  const $weaponImage = document.createElement('img');
+  $weaponImage.setAttribute('src', index.displayIcon);
+  $weaponImage.setAttribute('class', 'weapon-image-smaller-width');
+
+  const $weaponName = document.createElement('div');
+  $weaponName.setAttribute('class', 'weapon-name');
+  $weaponName.textContent = index.displayName;
+
+  $weaponParent.appendChild($weaponImage);
+  $weaponParent.appendChild($weaponName);
+
+  return $weaponParent;
+}
+
+// const map = new XMLHttpRequest();
+// map.open('GET', 'https://valorant-api.com/v1/maps/');
+// map.responseType = 'json';
+// map.addEventListener('load', function () {
+//   for (let i = 0; i < 6; i++) {
+//     $agentRow1.appendChild(createAgentElement(map.response.data[i]));
+//   }
+//   for (let i = 6; i < 13; i++) {
+//     if (i !== 9) {
+//       $agentRow2.appendChild(createAgentElement(map.response.data[i]));
+//     }
+//   }
+//   for (let i = 13; i < 19; i++) {
+//     $agentRow3.appendChild(createAgentElement(map.response.data[i]));
+//   }
+//   for (let i = 19; i < 24; i++) {
+//     $agentRow4.appendChild(createAgentElement(map.response.data[i]));
+//     $agentRow4.appendChild($agentUnknown);
+//   }
+// });
+// map.send();
 
 const $homepageTab = document.querySelector('[data-view=homepage]');
 const $agentViewPage1 = document.querySelector(
@@ -306,10 +404,10 @@ $clickPreviousAgent.addEventListener('click', function (event) {
   viewSwap('agents-view-page-1');
 });
 
-const $clickAgent = document.querySelector('.agent-select');
-$clickAgent.addEventListener('click', function (event) {
-  viewSwap('selected-agent-page');
-});
+// const $clickAgent = document.querySelector('.agent-select');
+// $clickAgent.addEventListener('click', function (event) {
+//   viewSwap('selected-agent-page');
+// });
 
 const $clickWeaponsTab = document.querySelector('.weapons-tab');
 $clickWeaponsTab.addEventListener('click', function (event) {

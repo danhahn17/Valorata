@@ -452,54 +452,14 @@ select:hover {
 
 .weapon-image {
   margin: 25px;
+  height: 100px;
+  width: 350px;
 }
 
-.classic-image {
-  height: 55px;
-  width: 55px;
-}
-
-.shorty-image {
-  padding-top: 5px;
-  height: 55px;
-  width: 100px;
-}
-
-.frenzy-image {
-  height: 55px;
-  width: 55px;
-}
-
-.ghost-image {
-  padding-top: 7px;
-  height: 55px;
-  width: 100px;
-}
-
-.sheriff-image {
-  height: 55px;
-  width: 70px;
-}
-
-.stinger-image {
-  padding-top: 1px;
-  height: 55px;
-  width: 90px;
-}
-
-.spectre-image {
-  height: 55px;
-  width: 90px;
-}
-
-.bucky-image {
-  height: 55px;
-  width: 135px;
-}
-
-.judge-image {
-  height: 55px;
-  width: 145px;
+.weapon-image-smaller-width {
+  margin: 25px;
+  height: 100px;
+  width: 175px;
 }
 
 .weapon-name {
@@ -540,69 +500,28 @@ select:hover {
 
 /* weapon page 2 */
 
-.weapon-container-2 {
-  width: 100%;
-  height: 100px;
-  flex-basis: calc(100% / 2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .weapon-page-container-2 {
   background-color: rgb(13, 25, 36);
   height: 100%;
   width: 100%;
 }
 
-.bulldog-image {
-  height: 55px;
-  width: 135px;
+.weapon-group-2-row-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 100%;
 }
 
-.guardian-image {
-  padding-top: 6px;
-  padding-bottom: 5px;
-  height: 55px;
-  width: 135px;
+.weapon-group-2-row-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.phantom-image {
-  padding-top: 5px;
-  padding-bottom: 4px;
-  height: 55px;
-  width: 135px;
-}
-
-.vandal-image {
-  height: 55px;
-  width: 135px;
-}
-
-.marshal-image {
-  height: 50px;
-  width: 137px;
-}
-
-.operator-image {
-  height: 55px;
-  width: 137px;
-}
-
-.ares-image {
-  padding-top: 7px;
-  height: 55px;
-  width: 135px;
-}
-
-.odin-image {
-  height: 55px;
-  width: 135px;
-}
-
-.melee-image {
-  height: 55px;
-  width: 115px;
+.weapon-group-2-row-alone {
+  width: 100%;
 }
 
 .previous-weapon-page {
@@ -1156,11 +1075,6 @@ select:hover {
     height: 100%;
   }
 
-  .weapon-container-2 {
-    flex-basis: calc(100% / 4);
-    height: 100%;
-  }
-
   .weapon-group-1-row-1 {
     width: 100%;
     justify-content: center;
@@ -1180,66 +1094,33 @@ select:hover {
     align-items: center;
   }
 
+  .weapon-group-2-row-1 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weapon-group-2-row-2 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+  }
+
+  .weapon-group-2-row-alone {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
   .weapon-container-last {
     width: 25%;
   }
 
   .weapon-image {
     margin: 40px;
-  }
-
-  .classic-image {
-    padding-bottom: 15px;
-    height: 140px;
-    width: 150px;
-  }
-
-  .shorty-image {
-    margin-top: 65px;
-    margin-bottom: 55px;
-    height: 100px;
-    width: 250px;
-  }
-
-  .frenzy-image {
-    margin-top: 55px;
-    margin-bottom: 55px;
-    height: 110px;
-    width: 135px;
-  }
-
-  .ghost-image {
-    margin-top: 65px;
-    margin-bottom: 60px;
-    height: 95px;
-    width: 190px;
-  }
-
-  .sheriff-image {
-    height: 100px;
-    width: 185px;
-  }
-
-  .stinger-image {
-    height: 100px;
-    width: 225px;
-  }
-
-  .spectre-image {
-    height: 100px;
-    width: 250px;
-  }
-
-  .bucky-image {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 80px;
-    width: 375px;
-  }
-
-  .judge-image {
-    height: 100px;
-    width: 295px;
+    max-height: 250px;
+    max-width: 350px;
   }
 
   .weapon-name {
@@ -1253,54 +1134,6 @@ select:hover {
     align-items: center;
     font-size: 20px;
     font-family: Roboto, sans-serif;
-  }
-
-  .bulldog-image {
-    height: 100px;
-    width: 295px;
-  }
-
-  .guardian-image {
-    height: 100px;
-    width: 295px;
-  }
-
-  .phantom-image {
-    margin-top: 50px;
-    height: 90px;
-    width: 295px;
-  }
-
-  .vandal-image {
-    margin-top: 45px;
-    height: 95px;
-    width: 295px;
-  }
-
-  .marshal-image {
-    height: 80px;
-    width: 375px;
-  }
-
-  .operator-image {
-    height: 80px;
-    width: 375px;
-  }
-
-  .ares-image {
-    height: 80px;
-    width: 295px;
-  }
-
-  .odin-image {
-    margin-top: 30px;
-    height: 90px;
-    width: 325px;
-  }
-
-  .melee-image {
-    height: 90px;
-    width: 250px;
   }
 
   /* Selected Weapon Page */

@@ -152,7 +152,7 @@ function viewMap() {
   map.send();
 }
 
-const $mapContainer1 = document.querySelector('.maps-group-container-1');
+const $mapContainer1 = document.querySelector('.map-spacing-1');
 const $mapContainer2 = document.querySelector('.map-spacing-2');
 
 function createMapElement(index) {

@@ -451,16 +451,16 @@ select:hover {
 }
 
 .weapon-image {
-  margin: 25px;
-  height: 100px;
-  width: 350px;
+  margin: 10px;
+  height: 50px;
+  width: 165px;
 }
 
-.weapon-image-smaller-width {
+/* .weapon-image-smaller-width {
   margin: 25px;
   height: 100px;
   width: 175px;
-}
+} */
 
 .weapon-name {
   color: white;

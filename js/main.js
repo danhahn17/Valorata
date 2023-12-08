@@ -1,24 +1,26 @@
-const agent = new XMLHttpRequest();
-agent.open('GET', 'https://valorant-api.com/v1/agents/');
-agent.responseType = 'json';
-agent.addEventListener('load', function () {
-  for (let i = 0; i < 6; i++) {
-    $agentRow1.appendChild(createAgentElement(agent.response.data[i]));
-  }
-  for (let i = 6; i < 13; i++) {
-    if (i !== 9) {
-      $agentRow2.appendChild(createAgentElement(agent.response.data[i]));
+function viewAgent() {
+  const agent = new XMLHttpRequest();
+  agent.open('GET', 'https://valorant-api.com/v1/agents/');
+  agent.responseType = 'json';
+  agent.addEventListener('load', function () {
+    for (let i = 0; i < 6; i++) {
+      $agentRow1.appendChild(createAgentElement(agent.response.data[i]));
     }
-  }
-  for (let i = 13; i < 19; i++) {
-    $agentRow3.appendChild(createAgentElement(agent.response.data[i]));
-  }
-  for (let i = 19; i < 24; i++) {
-    $agentRow4.appendChild(createAgentElement(agent.response.data[i]));
-    $agentRow4.appendChild($agentUnknown);
-  }
-});
-agent.send();
+    for (let i = 6; i < 13; i++) {
+      if (i !== 9) {
+        $agentRow2.appendChild(createAgentElement(agent.response.data[i]));
+      }
+    }
+    for (let i = 13; i < 19; i++) {
+      $agentRow3.appendChild(createAgentElement(agent.response.data[i]));
+    }
+    for (let i = 19; i < 24; i++) {
+      $agentRow4.appendChild(createAgentElement(agent.response.data[i]));
+      $agentRow4.appendChild($agentUnknown);
+    }
+  });
+  agent.send();
+}
 
 const $agentRow1 = document.querySelector('.agent-row-1');
 const $agentRow2 = document.querySelector('.agent-row-2');
@@ -65,41 +67,32 @@ function createAgentElement(index) {
   return $agentParent;
 }
 
-const weapon = new XMLHttpRequest();
-weapon.open('GET', 'https://valorant-api.com/v1/weapons/');
-weapon.responseType = 'json';
-weapon.addEventListener('load', function () {
-  for (let i = 0; i < 4; i++) {
-    $weaponRow1.appendChild(createWeaponElement(weapon.response.data[i]));
-  }
-  for (let i = 4; i < 8; i++) {
-    if ((i = 7)) {
-      $weaponRow2.appendChild(
-        createCustomWeaponElement(weapon.response.data[i]),
-      );
-    } else {
+function viewWeapon() {
+  const weapon = new XMLHttpRequest();
+  weapon.open('GET', 'https://valorant-api.com/v1/weapons/');
+  weapon.responseType = 'json';
+  weapon.addEventListener('load', function () {
+    for (let i = 0; i < 4; i++) {
+      $weaponRow1.appendChild(createWeaponElement(weapon.response.data[i]));
+    }
+    for (let i = 4; i < 8; i++) {
       $weaponRow2.appendChild(createWeaponElement(weapon.response.data[i]));
     }
-  }
-  for (let i = 8; i < 9; i++) {
-    $weaponRow3.appendChild(createWeaponElement(weapon.response.data[i]));
-  }
-  for (let i = 9; i < 13; i++) {
-    if ((i = 10)) {
-      $weaponRow4.appendChild(
-        createCustomWeaponElement(weapon.response.data[i]),
-      );
+    for (let i = 8; i < 9; i++) {
+      $weaponRow3.appendChild(createWeaponElement(weapon.response.data[i]));
     }
-    $weaponRow4.appendChild(createWeaponElement(weapon.response.data[i]));
-  }
-  for (let i = 13; i < 17; i++) {
-    $weaponRow5.appendChild(createWeaponElement(weapon.response.data[i]));
-  }
-  for (let i = 17; i < 18; i++) {
-    $weaponRow6.appendChild(createWeaponElement(weapon.response.data[i]));
-  }
-});
-weapon.send();
+    for (let i = 9; i < 13; i++) {
+      $weaponRow4.appendChild(createWeaponElement(weapon.response.data[i]));
+    }
+    for (let i = 13; i < 17; i++) {
+      $weaponRow5.appendChild(createWeaponElement(weapon.response.data[i]));
+    }
+    for (let i = 17; i < 18; i++) {
+      $weaponRow6.appendChild(createWeaponElement(weapon.response.data[i]));
+    }
+  });
+  weapon.send();
+}
 
 const $weaponRow1 = document.querySelector('.weapon-group-1-row-1');
 const $weaponRow2 = document.querySelector('.weapon-group-1-row-2');
@@ -126,23 +119,23 @@ function createWeaponElement(index) {
   return $weaponParent;
 }
 
-function createCustomWeaponElement(index) {
-  const $weaponParent = document.createElement('a');
-  $weaponParent.setAttribute('class', 'weapon-container');
+// function createCustomWeaponElement(index) {
+//   const $weaponParent = document.createElement('a');
+//   $weaponParent.setAttribute('class', 'weapon-container');
 
-  const $weaponImage = document.createElement('img');
-  $weaponImage.setAttribute('src', index.displayIcon);
-  $weaponImage.setAttribute('class', 'weapon-image-smaller-width');
+//   const $weaponImage = document.createElement('img');
+//   $weaponImage.setAttribute('src', index.displayIcon);
+//   $weaponImage.setAttribute('class', 'weapon-image-smaller-width');
 
-  const $weaponName = document.createElement('div');
-  $weaponName.setAttribute('class', 'weapon-name');
-  $weaponName.textContent = index.displayName;
+//   const $weaponName = document.createElement('div');
+//   $weaponName.setAttribute('class', 'weapon-name');
+//   $weaponName.textContent = index.displayName;
 
-  $weaponParent.appendChild($weaponImage);
-  $weaponParent.appendChild($weaponName);
+//   $weaponParent.appendChild($weaponImage);
+//   $weaponParent.appendChild($weaponName);
 
-  return $weaponParent;
-}
+//   return $weaponParent;
+// }
 
 // const map = new XMLHttpRequest();
 // map.open('GET', 'https://valorant-api.com/v1/maps/');
@@ -380,29 +373,42 @@ function viewSwap(clickedAway) {
     $selectedMapPage.className = 'hidden';
     $createCardPage.className = 'hidden';
     $galleryPage.className = 'hidden';
-    $selectedCardPage.className = 'clicked-gallery-card hidden';
+    $selectedCardPage.className = 'clicked-gallery-card';
   }
 }
 
 const $clickedLogo = document.querySelector('.header');
+const $clickAgentTab = document.querySelector('.agents-tab');
+const $clickNextAgent = document.querySelector('.next-agent-button');
+const $clickPreviousAgent = document.querySelector('.previous-agent-button');
+
 $clickedLogo.addEventListener('click', function (event) {
   viewSwap('homepage');
 });
 
-const $clickAgentTab = document.querySelector('.agents-tab');
 $clickAgentTab.addEventListener('click', function (event) {
   viewSwap('agents-view-page-1');
 });
+$clickAgentTab.addEventListener('click', viewAgent());
 
-const $clickNextAgent = document.querySelector('.next-agent-button');
 $clickNextAgent.addEventListener('click', function (event) {
   viewSwap('agents-view-page-2');
 });
 
-const $clickPreviousAgent = document.querySelector('.previous-agent-button');
 $clickPreviousAgent.addEventListener('click', function (event) {
   viewSwap('agents-view-page-1');
 });
+
+// $selectedAgentPage
+// $weaponViewPage1
+// $weaponViewPage2
+// $selectedWeaponPage
+// $mapViewPage1
+// $mapViewPage2
+// $selectedMapPage
+// $createCardPage
+// $galleryPage
+// $selectedCardPage
 
 // const $clickAgent = document.querySelector('.agent-select');
 // $clickAgent.addEventListener('click', function (event) {
@@ -413,6 +419,7 @@ const $clickWeaponsTab = document.querySelector('.weapons-tab');
 $clickWeaponsTab.addEventListener('click', function (event) {
   viewSwap('weapons-view-page-1');
 });
+$clickWeaponsTab.addEventListener('click', viewWeapon());
 
 const $clickNextWeapon = document.querySelector('.next-weapon-button');
 $clickNextWeapon.addEventListener('click', function (event) {
@@ -424,14 +431,14 @@ $clickPreviousWeapon.addEventListener('click', function (event) {
   viewSwap('weapons-view-page-1');
 });
 
-const $clickWeapon1 = document.querySelector('.weapon-container');
-const $clickWeapon2 = document.querySelector('.weapon-container-last');
-$clickWeapon1.addEventListener('click', function (event) {
-  viewSwap('selected-weapon-page');
-});
-$clickWeapon2.addEventListener('click', function (event) {
-  viewSwap('selected-weapon-page');
-});
+// const $clickWeapon1 = document.querySelector('.weapon-container');
+// const $clickWeapon2 = document.querySelector('.weapon-container-last');
+// $clickWeapon1.addEventListener('click', function (event) {
+//   viewSwap('selected-weapon-page');
+// });
+// $clickWeapon2.addEventListener('click', function (event) {
+//   viewSwap('selected-weapon-page');
+// });
 
 const $clickMapTab = document.querySelector('.maps-tab');
 $clickMapTab.addEventListener('click', function (event) {
@@ -448,10 +455,10 @@ $clickPreviousMap.addEventListener('click', function (event) {
   viewSwap('maps-view-page-1');
 });
 
-const $clickMap = document.querySelector('.maps-group');
-$clickMap.addEventListener('click', function (event) {
-  viewSwap('selected-map-page');
-});
+// const $clickMap = document.querySelector('.maps-group');
+// $clickMap.addEventListener('click', function (event) {
+//   viewSwap('selected-map-page');
+// });
 
 const $clickCreateCard = document.querySelector('.create-a-card-tab');
 $clickCreateCard.addEventListener('click', function (event) {

@@ -653,7 +653,11 @@ select:hover {
   flex-direction: column;
 }
 
-.map-spacing {
+.map-spacing-1 {
+  height: 15px;
+}
+
+.map-spacing-2 {
   height: 15px;
 }
 

@@ -137,27 +137,45 @@ function createWeaponElement(index) {
 //   return $weaponParent;
 // }
 
-// const map = new XMLHttpRequest();
-// map.open('GET', 'https://valorant-api.com/v1/maps/');
-// map.responseType = 'json';
-// map.addEventListener('load', function () {
-//   for (let i = 0; i < 6; i++) {
-//     $agentRow1.appendChild(createAgentElement(map.response.data[i]));
-//   }
-//   for (let i = 6; i < 13; i++) {
-//     if (i !== 9) {
-//       $agentRow2.appendChild(createAgentElement(map.response.data[i]));
-//     }
-//   }
-//   for (let i = 13; i < 19; i++) {
-//     $agentRow3.appendChild(createAgentElement(map.response.data[i]));
-//   }
-//   for (let i = 19; i < 24; i++) {
-//     $agentRow4.appendChild(createAgentElement(map.response.data[i]));
-//     $agentRow4.appendChild($agentUnknown);
-//   }
-// });
-// map.send();
+function viewMap() {
+  const map = new XMLHttpRequest();
+  map.open('GET', 'https://valorant-api.com/v1/maps/');
+  map.responseType = 'json';
+  map.addEventListener('load', function () {
+    for (let i = 0; i < 5; i++) {
+      $mapContainer1.appendChild(createMapElement(map.response.data[i]));
+    }
+    for (let i = 5; i < 10; i++) {
+      $mapContainer2.appendChild(createMapElement(map.response.data[i]));
+    }
+  });
+  map.send();
+}
+
+const $mapContainer1 = document.querySelector('.maps-group-container-1');
+const $mapContainer2 = document.querySelector('.map-spacing-2');
+
+function createMapElement(index) {
+  const $mapParent = document.createElement('a');
+  $mapParent.setAttribute('class', 'maps-group');
+
+  const $mapImageContainer = document.createElement('div');
+  $mapImageContainer.setAttribute('class', 'map-image-name-container');
+
+  const $mapImage = document.createElement('img');
+  $mapImage.setAttribute('src', index.listViewIcon);
+  $mapImage.setAttribute('class', 'map-image');
+
+  const $mapName = document.createElement('div');
+  $mapName.setAttribute('class', 'map-name');
+  $mapName.textContent = index.displayName;
+
+  $mapParent.appendChild($mapImageContainer);
+  $mapImageContainer.appendChild($mapImage);
+  $mapImageContainer.appendChild($mapName);
+
+  return $mapParent;
+}
 
 const $homepageTab = document.querySelector('[data-view=homepage]');
 const $agentViewPage1 = document.querySelector(
@@ -444,6 +462,7 @@ const $clickMapTab = document.querySelector('.maps-tab');
 $clickMapTab.addEventListener('click', function (event) {
   viewSwap('maps-view-page-1');
 });
+$clickMapTab.addEventListener('click', viewMap());
 
 const $clickNextMap = document.querySelector('.next-maps-button');
 $clickNextMap.addEventListener('click', function (event) {
